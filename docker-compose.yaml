@@ -23,7 +23,7 @@ services:
       networks:
         - overlay
       volumes:
-        - /etc/letsencrypt/live/kartoza.letlojanedigital.co.za/haproxy:/usr/local/etc/haproxy/ssl/
+        - /etc/letsencrypt/live/kartoza.letlojanedigital.co.za/haproxy:/usr/local/etc/haproxy/ssl
 
       configs:
         - source: haproxyconfig
