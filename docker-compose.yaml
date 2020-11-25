@@ -8,3 +8,16 @@ services:
         endpoint_mode: dnsrr
       networks:
         - overlay
+    
+    myloadbalancer:
+      image: haproxy:latest
+      ports: 
+        - "80:80"
+        - "443:443"
+        - "1991:1991"
+      depends_on:
+        - mywebserver
+      networks:
+        - overlay
+networks:
+  overlay:
