@@ -10,11 +10,11 @@ services:
         - overlay
       configs:
         - source: homepage
-          target: /usr/share/nginx/html
-    
+          target: /usr/share/nginx/html/index.html
+
     myloadbalancer:
       image: haproxy:latest
-      ports: 
+      ports:
         - "80:80"
         - "443:443"
         - "1991:1991"
@@ -27,7 +27,7 @@ services:
 
       configs:
         - source: haproxyconfig
-          target: /usr/local/etc/haproxy
+          target: /usr/local/etc/haproxy/haproxy.cfg
 networks:
   overlay:
 
