@@ -23,6 +23,11 @@ ubuntu@kartoza-server:~$ chmod u+x deploykartozaapp.sh
 ubuntu@kartoza-server:~$ ./deploykartozaapp.sh kortazo
 ```
 
+## Replication
+Horizontal scalling can be done by changing the docker compose file replicas property or running the following command:
+ ```docker service scale kortazo_SERVICENAME=x ```
+ where SERVICENAME is the name of your stack service
+
 ## Cleaning Up
 To remove the stack and do a cleanup of the application,
 
