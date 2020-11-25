@@ -39,3 +39,7 @@ ubuntu@kartoza-server:~$ chmod u+x removekartozaapp.sh
 ubuntu@kartoza-server:~$ ./removekartozaapp.sh YOURSTACKNAME
 ```
 where YOURSTACKNAME is the name of the stack you want to remove.
+
+## Application Architecture
+![Kartoza Application Architecture](https://user-images.githubusercontent.com/69802565/100230961-093ea180-2f2f-11eb-8d70-a9d3255d8349.jpg)
+
