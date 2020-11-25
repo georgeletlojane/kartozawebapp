@@ -22,6 +22,9 @@ services:
         - mywebserver
       networks:
         - overlay
+      volumes:
+        - /etc/letsencrypt/live/kartoza.letlojanedigital.co.za/haproxy:/usr/local/etc/haproxy/ssl/
+
       configs:
         - source: haproxyconfig
           target: /usr/local/etc/haproxy
