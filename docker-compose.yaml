@@ -8,6 +8,9 @@ services:
         endpoint_mode: dnsrr
       networks:
         - overlay
+      configs:
+        - source: homepage
+          target: /usr/share/nginx/html
     
     myloadbalancer:
       image: haproxy:latest
@@ -19,5 +22,14 @@ services:
         - mywebserver
       networks:
         - overlay
+      configs:
+        - source: haproxyconfig
+          target: /usr/local/etc/haproxy
 networks:
   overlay:
+
+configs:
+  homepage:
+    file: ./website/index.html
+  haproxyconfig:
+    file: ./haproxy/haproxy.cfg
