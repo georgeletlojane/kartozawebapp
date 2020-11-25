@@ -4,6 +4,9 @@ Simple load balanced web engine for Kartoza. This is merely to demonstrate a sta
 - HaProxy as a load balancer
 - 2 x nginx web servers
 
+Application can be accessed on https://kartoza.letlojanedigital.co.za
+Load Balancer stats can be read on http://kartoza.letlojanedigital.co.za:1991/ha-stats
+
 ## Quick Start
 To deploy the application to your Linux instance, please run the following commands in the root directory of this application folder
 
