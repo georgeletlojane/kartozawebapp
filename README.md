@@ -14,8 +14,9 @@ To deploy the application to your Linux instance, please run the following comma
 
 Alternatively, run script in application root dir for an automated deployment 
 ```console
-ubuntu@kartoza-server:~$ ./deploykartozaapp.sh
+ubuntu@kartoza-server:~$ ./deploykartozaapp.sh YOURSTACKNAME
 ```
+where YOURSTACKNAME is the name of the stack your new stack.
 
 ## Cleaning Up
 To remove the stack and do a cleanup of the application,
@@ -26,4 +27,6 @@ To remove the stack and do a cleanup of the application,
 
 Alternatively, run script in application root dir for an automated clean up 
 ```console
-ubuntu@kartoza-server:~$ ./removekartozaapp.sh
+ubuntu@kartoza-server:~$ ./removekartozaapp.sh YOURSTACKNAME
+```
+where YOURSTACKNAME is the name of the stack you want to remove.
