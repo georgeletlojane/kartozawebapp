@@ -11,7 +11,7 @@ Load Balancer stats can be read on http://kartoza.letlojanedigital.co.za:1991/ha
 To deploy the application to your Linux instance, please run the following commands in the root directory of this application folder
 
 1. First, initialise the node as docker manager, run ```docker swarm init```
-1. Then run ```docker stack deploy --compose-file docker-compose.yaml YourStackName ``` to create your stack defined in the docker-compose file
+1. Then run ```docker stack deploy --compose-file docker-compose.yaml kortazo ``` to create your stack defined in the docker-compose file
 2. To check if the stack has been created, run ```docker stack ls```
 3. Confirm the corresponding containers are running ```docker ps```
 
@@ -20,15 +20,14 @@ Alternatively, run script in application root dir for an automated deployment
 ubuntu@kartoza-server:~$ chmod u+x deploykartozaapp.sh
 ```
 ```console
-ubuntu@kartoza-server:~$ ./deploykartozaapp.sh YOURSTACKNAME
+ubuntu@kartoza-server:~$ ./deploykartozaapp.sh kortazo
 ```
-where YOURSTACKNAME is the name of the stack your new stack.
 
 ## Cleaning Up
 To remove the stack and do a cleanup of the application,
 
 1. Check for the stack you're about to remove, run ```docker stack ls```
-2. Then run ```docker stack rm YourStackName ``` to remove your stack 
+2. Then run ```docker stack rm kortazo ``` to remove your stack 
 3. Confirm the changes have taken effect, run ```docker stack ls```
 
 Alternatively, run script in application root dir for an automated clean up 
@@ -36,9 +35,8 @@ Alternatively, run script in application root dir for an automated clean up
 ubuntu@kartoza-server:~$ chmod u+x removekartozaapp.sh 
 ```
 ```console
-ubuntu@kartoza-server:~$ ./removekartozaapp.sh YOURSTACKNAME
+ubuntu@kartoza-server:~$ ./removekartozaapp.sh kortazo
 ```
-where YOURSTACKNAME is the name of the stack you want to remove.
 
 ## Application Architecture
 ![Kartoza Application Architecture](https://user-images.githubusercontent.com/69802565/100230961-093ea180-2f2f-11eb-8d70-a9d3255d8349.jpg)
