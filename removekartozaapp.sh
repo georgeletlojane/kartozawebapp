@@ -11,12 +11,19 @@ if [ $# -eq 0 ]
         exit 1
 fi
 
-echo "Removing the stack..."
-docker stack rm $1
+read -r -p "Are you sure you want to remove this stack? [Yy - Yes] [Any key - No] " response
+echo    # (optional) move to a new line
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+then
+        echo "Removing the stack..."
+        docker stack rm $1
 
-echo "Removing node from swarm..."
-docker swarm leave --force
+        echo "Removing node from swarm..."
+        docker swarm leave --force
 
-echo "Done."
+        echo "Done."
 
+    else
+        exit 1
+fi
 # That's all
